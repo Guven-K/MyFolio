@@ -1479,11 +1479,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/guven/RiderProjects/MyFolio/MyFolio/MyFolio.csproj",
+      "projectUniqueName": "/Volumes/Guven's T7/GitHub/MyFolio/MyFolio/MyFolio.csproj",
       "projectName": "MyFolio",
-      "projectPath": "/Users/guven/RiderProjects/MyFolio/MyFolio/MyFolio.csproj",
+      "projectPath": "/Volumes/Guven's T7/GitHub/MyFolio/MyFolio/MyFolio.csproj",
       "packagesPath": "/Users/guven/.nuget/packages/",
-      "outputPath": "/Users/guven/RiderProjects/MyFolio/MyFolio/obj/",
+      "outputPath": "/Volumes/Guven's T7/GitHub/MyFolio/MyFolio/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/guven/.nuget/NuGet/NuGet.Config"

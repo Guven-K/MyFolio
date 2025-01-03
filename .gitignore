@@ -1,0 +1,4 @@
+
+*.json
+/MyFolio/obj
+/MyFolio/obj/Debug

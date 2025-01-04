@@ -4,4 +4,5 @@ namespace MyFolio.ViewModels;
 
 public class ViewModelBase : ObservableObject
 {
+    
 }

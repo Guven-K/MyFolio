@@ -2,14 +2,14 @@
 
 public class MainWindowViewModel : ViewModelBase
 {
-    public string Greeting { get; set; } = "Welcome to MyFolio!";
+    public string Greeting { get; set; } 
 
     public MainWindowViewModel()
     {
-        
+        Test();
     }
     public void Test()
     {
-        Greeting = "Let's test this!";
+        Greeting = "Welcome to MyFolio!";
     }
 }

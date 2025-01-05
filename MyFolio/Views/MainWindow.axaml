@@ -7,14 +7,15 @@
         x:Class="MyFolio.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
-        Title="MyFolio">
+        Title="MyFolio"
+        TransparencyLevelHint="AcrylicBlur"
+        Background="Black">
 
     <Design.DataContext>
         <!-- This only sets the DataContext for the previewer in an IDE,
              to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
         <vm:MainWindowViewModel/>
     </Design.DataContext>
-
-    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-
+    <Border  CornerRadius="8" Background="Gray"><TextBlock Background="White" Width="200" Height="100" TextAlignment="Center" Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/></Border>
+    
 </Window>

@@ -9,8 +9,9 @@
         Icon="/Assets/avalonia-logo.ico"
         Title="MyFolio"
         TransparencyLevelHint="AcrylicBlur"
-        Background="Transparent"
-		WindowStartupLocation="CenterScreen">
+        Background="#D0FFFFFF"
+		WindowStartupLocation="CenterScreen"
+		ExtendClientAreaToDecorationsHint="False">
 
 	<Design.DataContext>
 		<!-- This only sets the DataContext for the previewer in an IDE,

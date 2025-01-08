@@ -39,6 +39,15 @@
                        HorizontalAlignment="Center"
                        VerticalAlignment="Center"/>
 		</Border>
+
+		<Border CornerRadius="20"
+                Background="WhiteSmoke"
+                Padding="10"
+				Margin="20"
+				HorizontalAlignment="Center"
+			    VerticalAlignment="Bottom">
+			<Button Content="Continue" Background="WhiteSmoke"></Button>
+		</Border>
 	</Grid>
 </Window>
 

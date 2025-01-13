@@ -1,23 +1,48 @@
-﻿namespace MyFolio.ViewModels;
+﻿using System.Threading.Tasks;
+using CommunityToolkit;
+using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 
-public class MainWindowViewModel : ViewModelBase
+namespace MyFolio.ViewModels;
+
+public partial class MainWindowViewModel : ViewModelBase
 {
 
     #region Properties
-    public string? Greeting { get; set; }
+    [ObservableProperty]
+    private string? _greeting;
     #endregion
 
     #region Constructor
     public MainWindowViewModel()
     {
         Test();
+        Greeting = "Hello, World!";
     }
     #endregion
 
     #region Methods
-    public void Test()
+
+    public async void Test()
     {
         Greeting = "Welcome to MyFolio!";
+        await ChangeText();
+    }
+
+    private async Task ChangeText()
+    {
+        await Task.Delay(2000);
+        Greeting = "Are you ready?";
+    }
+    #endregion
+
+
+    #region RelayCommands Methods
+
+    [RelayCommand]
+    public void Continue()
+    {
+        Greeting = "You clicked me!";
     }
     #endregion
 }

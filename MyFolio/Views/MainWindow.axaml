@@ -9,60 +9,68 @@
         Icon="/Assets/avalonia-logo.ico"
         Title="MyFolio"
         TransparencyLevelHint="AcrylicBlur"
-        Background="#D0FFFFFF"
         WindowStartupLocation="CenterScreen"
         ExtendClientAreaToDecorationsHint="False">
 
-	<Design.DataContext>
-		<vm:MainWindowViewModel/>
-	</Design.DataContext>
+    <Design.DataContext>
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
 
-	<Grid>
-		<!-- Shadow Layer -->
-		<Border CornerRadius="20"
+    <Window.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="Blue" Offset="0"/>
+            <GradientStop Color="Blue" Offset="0.3"/>
+            <GradientStop Color="Purple" Offset="0.6"/>
+            <GradientStop Color="Red" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+
+    <Grid>
+        <!-- Shadow Layer -->
+        <Border CornerRadius="20"
                 Background="#C0000000" Margin="10,10,0,0" 
-		HorizontalAlignment="Center"
-		VerticalAlignment="Center"/>
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"/>
 
-		<!-- Main Content -->
-		<Border CornerRadius="20"
+        <!-- Main Content -->
+        <Border CornerRadius="20"
                 Background="WhiteSmoke"
                 Padding="10"
                 BorderBrush="Black"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center">
-			<TextBlock FontFamily="NunitoFont"
+            <TextBlock FontFamily="NunitoFont"
                        FontWeight="Bold"
-					   Padding="30"
+                       Padding="30"
                        TextAlignment="Center"
                        Text="{Binding Greeting}"
                        HorizontalAlignment="Center"
                        VerticalAlignment="Center"/>
-		</Border>
+        </Border>
 
-		<Border CornerRadius="20"
-		Background="WhiteSmoke"
-		Padding="10"
-		BorderBrush="Black"
-		HorizontalAlignment="Center"
-		VerticalAlignment="Center">
-			<TextBlock FontFamily="NunitoFont"
-                       FontWeight="Bold"
-					   Padding="30"
-                       TextAlignment="Center"
-                       Text="{Binding Greeting}"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center"/>
-		</Border>
-
-		<Border CornerRadius="20"
+        <Border CornerRadius="20"
                 Background="WhiteSmoke"
                 Padding="10"
-				Margin="20"
-				HorizontalAlignment="Center"
-			    VerticalAlignment="Bottom">
-			<Button Command="{Binding Continue}" Content="Continue" Background="WhiteSmoke"></Button>
-		</Border>
-	</Grid>
+                BorderBrush="Black"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center">
+            <TextBlock FontFamily="NunitoFont"
+                       FontWeight="Bold"
+                       Padding="30"
+                       TextAlignment="Center"
+                       Text="{Binding Greeting}"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"/>
+        </Border>
+
+        <Border CornerRadius="20"
+                Background="WhiteSmoke"
+                Padding="10"
+                Margin="20"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Bottom">
+            <Button Command="{Binding Continue}" Content="Continue" Background="WhiteSmoke"></Button>
+        </Border>
+    </Grid>
 </Window>
 

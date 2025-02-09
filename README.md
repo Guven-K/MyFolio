@@ -16,7 +16,8 @@ MyFolio is released under an open-source license, encouraging collaboration and 
 - **Q1 2025** – Core development, UI enhancements, and feature testing.  
 - **Q2 2025** – Beta release, feedback gathering, and additional refinements.  
 - **Q3 2025** – Official release with full documentation and feature completeness.  
-- **Beyond 2025** – Ongoing updates, community contributions, and potential expansions.  
+- **Beyond 2025** – Ongoing updates, community contributions, and potential expansions.
+- **2026** - Online Social features, friends request and following. 
 
 ## 📅 Release & Contributions  
 - 🛠 **Work in progress** – MyFolio is actively being developed and is planned for release later this year.  

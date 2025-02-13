@@ -26,8 +26,14 @@
 			<RowDefinition Height="25*"></RowDefinition>
 		</Grid.RowDefinitions>
 
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="25*"></ColumnDefinition>
+			<ColumnDefinition Width="25*"></ColumnDefinition>
+			<ColumnDefinition Width="25*"></ColumnDefinition>
+		</Grid.ColumnDefinitions>
 
-		<TextBlock Text="MyFolio" FontWeight="Bold" FontSize="25" HorizontalAlignment="Center" Margin="20"></TextBlock>
+
+		<TextBlock Grid.Row="0" Grid.Column="0" Text="MyFolio" FontWeight="Bold" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10"></TextBlock>
 		
         <!-- Shadow Layer -->
         <Border CornerRadius="20"
@@ -36,8 +42,7 @@
                 VerticalAlignment="Center"/>
 
         <!-- Main Content -->
-
-        <Border Grid.Row="1" CornerRadius="20"
+        <Border Grid.Row="1" Grid.Column="1" CornerRadius="20"
                 Background="WhiteSmoke"
                 Padding="10"
                 BorderBrush="Black"
@@ -52,7 +57,7 @@
                        VerticalAlignment="Center"/>
         </Border>
 
-        <Border Grid.Row="2"
+        <Border Grid.Row="2" Grid.Column="1"
 				CornerRadius="20"
                 Background="WhiteSmoke"
                 Padding="10"

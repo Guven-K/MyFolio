@@ -1,6 +1,6 @@
 # **MyFolio**  
 
-**MyFolio** is a customisable portfolio application built with the **d framework**, designed to showcase your personal projects, skills, and achievements. Whether you're a developer, designer, or artist, MyFolio provides a sleek and professional way to present your work.  
+**MyFolio** is a customisable portfolio application built with the **Avalonia framework**, designed to showcase your personal projects, skills, and achievements. Whether you're a developer, designer, or artist, MyFolio provides a sleek and professional way to present your work.  
 
 ## ✨ Features  
 - 🎨 **Customisable Layout & Themes** – Personalise your portfolio to match your style.  

@@ -17,15 +17,18 @@
     </Design.DataContext>
 
     <Window.Background>
-        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-            <GradientStop Color="Blue" Offset="0"/>
-            <GradientStop Color="Blue" Offset="0.3"/>
-            <GradientStop Color="Purple" Offset="0.6"/>
-            <GradientStop Color="Red" Offset="1"/>
-        </LinearGradientBrush>
     </Window.Background>
 
-    <Grid>
+    <Grid ShowGridLines="True">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="20*"></RowDefinition>
+			<RowDefinition Height="50*"></RowDefinition>
+			<RowDefinition Height="25*"></RowDefinition>
+		</Grid.RowDefinitions>
+
+
+		<TextBlock Text="MyFolio" FontWeight="Bold" FontSize="25" HorizontalAlignment="Center" Margin="20"></TextBlock>
+		
         <!-- Shadow Layer -->
         <Border CornerRadius="20"
                 Background="#C0000000" Margin="10,10,0,0" 
@@ -33,7 +36,8 @@
                 VerticalAlignment="Center"/>
 
         <!-- Main Content -->
-        <Border CornerRadius="20"
+
+        <Border Grid.Row="1" CornerRadius="20"
                 Background="WhiteSmoke"
                 Padding="10"
                 BorderBrush="Black"
@@ -48,27 +52,13 @@
                        VerticalAlignment="Center"/>
         </Border>
 
-        <Border CornerRadius="20"
-                Background="WhiteSmoke"
-                Padding="10"
-                BorderBrush="Black"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center">
-            <TextBlock FontFamily="NunitoFont"
-                       FontWeight="Bold"
-                       Padding="30"
-                       TextAlignment="Center"
-                       Text="{Binding Greeting}"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center"/>
-        </Border>
-
-        <Border CornerRadius="20"
+        <Border Grid.Row="2"
+				CornerRadius="20"
                 Background="WhiteSmoke"
                 Padding="10"
                 Margin="20"
                 HorizontalAlignment="Center"
-                VerticalAlignment="Bottom">
+                VerticalAlignment="Center">
             <Button Command="{Binding Continue}" Content="Continue" Background="WhiteSmoke"></Button>
         </Border>
     </Grid>

@@ -19,7 +19,7 @@
     <Window.Background>
     </Window.Background>
 
-    <Grid ShowGridLines="True">
+    <Grid ShowGridLines="False">
 		<Grid.RowDefinitions>
 			<RowDefinition Height="20*"></RowDefinition>
 			<RowDefinition Height="50*"></RowDefinition>
@@ -32,8 +32,7 @@
 			<ColumnDefinition Width="25*"></ColumnDefinition>
 		</Grid.ColumnDefinitions>
 
-
-		<TextBlock Grid.Row="0" Grid.Column="0" Text="MyFolio" FontWeight="Bold" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10"></TextBlock>
+		<TextBlock Grid.Row="0" Grid.Column="0" Text="MyFolio" FontWeight="Bold" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10"></TextBlock>
 		
         <!-- Shadow Layer -->
         <Border CornerRadius="20"
@@ -43,11 +42,11 @@
 
         <!-- Main Content -->
         <Border Grid.Row="1" Grid.Column="1" CornerRadius="20"
-                Background="WhiteSmoke"
+                Background="White"
                 Padding="10"
                 BorderBrush="Black"
                 HorizontalAlignment="Center"
-                VerticalAlignment="Center">
+                VerticalAlignment="Center" BoxShadow="0 3 50 0 DarkGray">
             <TextBlock FontFamily="NunitoFont"
                        FontWeight="Bold"
                        Padding="30"
@@ -58,13 +57,15 @@
         </Border>
 
         <Border Grid.Row="2" Grid.Column="1"
-				CornerRadius="20"
-                Background="WhiteSmoke"
+				CornerRadius="6"
+               Background="Gainsboro"
                 Padding="10"
+				BorderThickness="0.6"
+				BorderBrush="Black"
                 Margin="20"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center">
-            <Button Command="{Binding Continue}" Content="Continue" Background="WhiteSmoke"></Button>
+            <Button Command="{Binding Continue}" Content="Continue" FontWeight="DemiBold" Background="Gainsboro"></Button>
         </Border>
     </Grid>
 </Window>

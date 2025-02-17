@@ -33,7 +33,7 @@
 		</Grid.ColumnDefinitions>
 
 		<TextBlock Grid.Row="0" Grid.Column="0" Text="MyFolio" FontWeight="Bold" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10"></TextBlock>
-		
+
         <!-- Shadow Layer -->
         <Border CornerRadius="20"
                 Background="#C0000000" Margin="10,10,0,0" 
@@ -57,11 +57,15 @@
         </Border>
 
 		<!-- Profile picture icon-->
-		<Border Grid.Row="0" Grid.Column="2" 
+		<Border Grid.Row="0" Grid.Column="2" CornerRadius="50"
 				Background="White"
-                Padding="10"
-				BorderThickness="0.6" VerticalAlignment="Center" BoxShadow="0 3 50 0 DarkGray" CornerRadius="50">
-			<Image Source="{Binding ProfilePicture}" Margin="10"/>
+				BoxShadow="0 3 50 0 DarkGray" 
+				ClipToBounds="True"
+				HorizontalAlignment="Center"
+				Width="100" Height="100"
+				Margin="10"
+                VerticalAlignment="Center">
+			<Image Source="avares://MyFolio/Assets/Images/profile.png" Stretch="UniformToFill" />
 		</Border>
 		
 		<!-- Continue Button -->

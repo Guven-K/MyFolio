@@ -32,7 +32,7 @@
 			<ColumnDefinition Width="25*"></ColumnDefinition>
 		</Grid.ColumnDefinitions>
 
-		<TextBlock Grid.Row="0" Grid.Column="0" Text="MyFolio" FontWeight="Bold" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10"></TextBlock>
+		<TextBlock Grid.Row="0" Grid.Column="0" Text="MyFolio" FontWeight="Bold" FontFamily="Sans-serif" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10"></TextBlock>
 
         <!-- Shadow Layer -->
         <Border CornerRadius="20"
@@ -47,8 +47,8 @@
                 BorderBrush="Black"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center" BoxShadow="0 3 50 0 DarkGray">
-            <TextBlock FontFamily="NunitoFont"
-                       FontWeight="Bold"
+            <TextBlock
+                      FontWeight="Bold"
                        Padding="30"
                        TextAlignment="Center"
                        Text="{Binding Greeting}"

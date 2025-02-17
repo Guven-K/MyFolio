@@ -19,7 +19,7 @@
     <Window.Background>
     </Window.Background>
 
-    <Grid ShowGridLines="False">
+    <Grid ShowGridLines="True">
 		<Grid.RowDefinitions>
 			<RowDefinition Height="20*"></RowDefinition>
 			<RowDefinition Height="50*"></RowDefinition>
@@ -56,9 +56,18 @@
                        VerticalAlignment="Center"/>
         </Border>
 
+		<!-- Profile picture icon-->
+		<Border Grid.Row="0" Grid.Column="2" 
+				Background="White"
+                Padding="10"
+				BorderThickness="0.6" VerticalAlignment="Center" BoxShadow="0 3 50 0 DarkGray" CornerRadius="50">
+			<Image Source="{Binding ProfilePicture}" Margin="10"/>
+		</Border>
+		
+		<!-- Continue Button -->
         <Border Grid.Row="2" Grid.Column="1"
 				CornerRadius="6"
-               Background="Gainsboro"
+                Background="Gainsboro"
                 Padding="10"
 				BorderThickness="0.6"
 				BorderBrush="Black"

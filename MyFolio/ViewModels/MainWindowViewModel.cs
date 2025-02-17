@@ -1,4 +1,5 @@
 ﻿using System.Threading.Tasks;
+using Avalonia.Media.Imaging;
 using CommunityToolkit;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
@@ -11,6 +12,9 @@ public partial class MainWindowViewModel : ViewModelBase
     #region Properties
     [ObservableProperty]
     private string? _greeting;
+
+    [ObservableProperty]
+    private Bitmap? _profilePicture;
     #endregion
 
     #region Constructor

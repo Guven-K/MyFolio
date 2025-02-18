@@ -3,14 +3,16 @@
         xmlns:vm="using:MyFolio.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="500"
         x:Class="MyFolio.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
         Title="MyFolio"
         TransparencyLevelHint="AcrylicBlur"
         WindowStartupLocation="CenterScreen"
-        ExtendClientAreaToDecorationsHint="False">
+        ExtendClientAreaToDecorationsHint="False"
+		Width="1400"
+        Height="800">
 
     <Design.DataContext>
         <vm:MainWindowViewModel/>
@@ -19,7 +21,7 @@
     <Window.Background>
     </Window.Background>
 
-    <Grid ShowGridLines="True">
+    <Grid ShowGridLines="False">
 		<Grid.RowDefinitions>
 			<RowDefinition Height="20*"></RowDefinition>
 			<RowDefinition Height="50*"></RowDefinition>
@@ -78,7 +80,7 @@
                 Margin="20"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center">
-            <Button Command="{Binding Continue}" Content="Continue" FontWeight="DemiBold" Background="Gainsboro"></Button>
+            <Button Command="{Binding Continue}" Content="Continue" FontWeight="Bold" Background="Gainsboro"></Button>
         </Border>
     </Grid>
 </Window>

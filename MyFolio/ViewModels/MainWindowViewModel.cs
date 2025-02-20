@@ -1,5 +1,8 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using Avalonia.Media.Imaging;
+using Avalonia;
+using Avalonia.Platform;
 using CommunityToolkit;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
@@ -22,6 +25,9 @@ public partial class MainWindowViewModel : ViewModelBase
     {
         Test();
         Greeting = "Hello, World!";
+
+        var uri = new Uri("avares://MyFolio/Assets/Images/profile.png");
+        ProfilePicture = new Bitmap(AssetLoader.Open(uri));
     }
     #endregion
 

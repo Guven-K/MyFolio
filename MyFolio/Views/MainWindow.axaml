@@ -67,7 +67,7 @@
 				Width="100" Height="100"
 				Margin="10"
                 VerticalAlignment="Center">
-			<Image Source="avares://MyFolio/Assets/Images/profile.png" Stretch="UniformToFill" />
+			<Image Source="{Binding ProfilePicture}" Stretch="UniformToFill" />
 		</Border>
 		
 		<!-- Continue Button -->

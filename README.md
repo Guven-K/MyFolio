@@ -9,6 +9,7 @@
 - 📝 **Rich Content Support** – Supports text, images, videos, and other media formats.  
 - 🚀 **Modern & Minimal UI** – A clean, distraction-free interface for an engaging experience.
 - ⚙️ **Powered by NET. 9** - Ensuring better compatibility and high-level performance.
+- **Various Themes** - Ranging from basic, creative, professional
 
 ## 🛠️ Open Source  
 MyFolio is released under an open-source license, encouraging collaboration and community-driven enhancements. If you'd like to contribute, check out the [GitHub repository](#) for more details.  

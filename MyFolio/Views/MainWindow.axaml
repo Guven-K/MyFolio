@@ -3,7 +3,11 @@
         xmlns:vm="using:MyFolio.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="500"
+        xmlns:ia="clr-namespace:Avalonia.Interactivity;assembly=Avalonia.Interactivity"
+        xmlns:behaviors="clr-namespace:Avalonia.Xaml.Interactions.Core;assembly=Avalonia.Xaml.Interactions"
+        xmlns:interactivity="http://schemas.microsoft.com/expression/2010/interactivity"
+        mc:Ignorable="d"
+        d:DesignWidth="800" d:DesignHeight="500"
         x:Class="MyFolio.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
@@ -11,77 +15,66 @@
         TransparencyLevelHint="AcrylicBlur"
         WindowStartupLocation="CenterScreen"
         ExtendClientAreaToDecorationsHint="False"
-		Width="1400"
+        Width="1400"
         Height="800">
 
-    <Design.DataContext>
-        <vm:MainWindowViewModel/>
-    </Design.DataContext>
+	<Design.DataContext>
+		<vm:MainWindowViewModel/>
+	</Design.DataContext>
 
-    <Window.Background>
-    </Window.Background>
-
-    <Grid ShowGridLines="False">
+	<Grid ShowGridLines="False">
 		<Grid.RowDefinitions>
-			<RowDefinition Height="20*"></RowDefinition>
-			<RowDefinition Height="50*"></RowDefinition>
-			<RowDefinition Height="25*"></RowDefinition>
+			<RowDefinition Height="20*" />
+			<RowDefinition Height="50*" />
+			<RowDefinition Height="25*" />
 		</Grid.RowDefinitions>
 
 		<Grid.ColumnDefinitions>
-			<ColumnDefinition Width="25*"></ColumnDefinition>
-			<ColumnDefinition Width="25*"></ColumnDefinition>
-			<ColumnDefinition Width="25*"></ColumnDefinition>
+			<ColumnDefinition Width="25*" />
+			<ColumnDefinition Width="25*" />
+			<ColumnDefinition Width="25*" />
 		</Grid.ColumnDefinitions>
 
-		<TextBlock Grid.Row="0" Grid.Column="0" Text="MyFolio" FontWeight="Bold" FontFamily="Sans-serif" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10"></TextBlock>
+		<TextBlock Grid.Row="0" Grid.Column="0" Text="MyFolio" FontWeight="Bold" FontFamily="Sans-serif"
+                   FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10" />
 
-        <!-- Shadow Layer -->
-        <Border CornerRadius="20"
-                Background="#C0000000" Margin="10,10,0,0" 
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center"/>
+		<!-- Profile Picture Container -->
+		<Grid Grid.Row="0" Grid.Column="2" Width="100" Height="100"
+              HorizontalAlignment="Center" VerticalAlignment="Center"
+              Cursor="Hand">
 
-        <!-- Main Content -->
-        <Border Grid.Row="1" Grid.Column="1" CornerRadius="20"
-                Background="White"
-                Padding="10"
-                BorderBrush="Black"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center" BoxShadow="0 3 50 0 DarkGray">
-            <TextBlock
-                      FontWeight="Bold"
-                       Padding="30"
-                       TextAlignment="Center"
-                       Text="{Binding Greeting}"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center"/>
-        </Border>
+			<!-- Mouse Hover Triggers -->
+			<interactivity:Interaction.Behaviors>
+				<behaviors:EventTriggerBehavior EventName="PointerEntered">
+					<behaviors:ChangePropertyAction PropertyName="IsHovering" Value="True" />
+				</behaviors:EventTriggerBehavior>
+				<behaviors:EventTriggerBehavior EventName="PointerExited">
+					<behaviors:ChangePropertyAction PropertyName="IsHovering" Value="False" />
+				</behaviors:EventTriggerBehavior>
+			</interactivity:Interaction.Behaviors>
 
-		<!-- Profile picture icon-->
-		<Border Grid.Row="0" Grid.Column="2" CornerRadius="50"
-				Background="White"
-				BoxShadow="0 3 50 0 DarkGray" 
-				ClipToBounds="True"
-				HorizontalAlignment="Center"
-				Width="100" Height="100"
-				Margin="10"
-                VerticalAlignment="Center">
-			<Image Source="{Binding ProfilePicture}" Stretch="UniformToFill" />
-		</Border>
-		
+			<!-- Profile Picture -->
+			<Border CornerRadius="50" Background="White" BoxShadow="0 3 50 0 DarkGray" ClipToBounds="True">
+				<Image Source="{Binding ProfilePicture}" Stretch="UniformToFill" />
+			</Border>
+
+			<!-- Hover Overlay -->
+			<Border Background="#80000000" CornerRadius="50"
+                    IsVisible="{Binding IsHovering}">
+				<TextBlock Text="Change Profile Pic" Foreground="White" FontWeight="Bold"
+                           HorizontalAlignment="Center" VerticalAlignment="Center"/>
+			</Border>
+
+			<!-- Change Picture Button -->
+			<Button Command="{Binding ChangeProfilePicture}" Background="Transparent"
+                    BorderThickness="0" Opacity="0"/>
+		</Grid>
+
 		<!-- Continue Button -->
-        <Border Grid.Row="2" Grid.Column="1"
-				CornerRadius="6"
-                Background="Gainsboro"
-                Padding="10"
-				BorderThickness="0.6"
-				BorderBrush="Black"
-                Margin="20"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center">
-            <Button Command="{Binding Continue}" Content="Continue" FontWeight="Bold" Background="Gainsboro"></Button>
-        </Border>
-    </Grid>
+		<Border Grid.Row="2" Grid.Column="1" CornerRadius="6" Background="Gainsboro"
+                Padding="10" BorderThickness="0.6" BorderBrush="Black" Margin="20"
+                HorizontalAlignment="Center" VerticalAlignment="Center">
+			<Button Command="{Binding Continue}" Content="Continue" FontWeight="Bold" Background="Gainsboro"/>
+		</Border>
+	</Grid>
 </Window>
-

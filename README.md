@@ -11,6 +11,9 @@
 - ⚙️ **Powered by NET. 9** - Ensuring better compatibility and high-level performance.
 - 🖌 **Various Styles** - Ranging from basic, creative, and professional.
 
+![C#](https://img.shields.io/badge/C%23-%2300599C.svg?style=for-the-badge&logo=csharp&logoColor=white)
+![Avalonia](https://img.shields.io/badge/Avalonia-%233776AB.svg?style=for-the-badge&logo=avalonia&logoColor=white)
+
 ## 🛠️ Open Source  
 MyFolio is released under an open-source license, encouraging collaboration and community-driven enhancements. If you'd like to contribute, check out the [GitHub repository](#) for more details.  
 

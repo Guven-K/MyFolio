@@ -32,7 +32,7 @@ MyFolio is released under an open-source license, encouraging collaboration and 
 ## 📜 License
 This project is licensed under the [MIT License](LICENSE).
 
-Note: This project was created as part of my personal development journey to push my skills further."
+Note: This project was created as part of my personal development journey to push my skills further.
 
 Stay tuned for updates! 🚀
 Contact me for additional requests and potential growth. 

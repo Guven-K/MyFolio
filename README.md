@@ -31,10 +31,23 @@ MyFolio is released under an open-source license, encouraging collaboration and 
 - 🛠 **Work in progress** – MyFolio is actively being developed and is planned for release later this year.  
 - 🤝 **Contributions are welcome!** – If you're interested in contributing, feel free to check out the repository and submit issues or pull requests. 
 
+
 ## 📜 License
 This project is licensed under the [MIT License](LICENSE).
 
 Note: This project was created as part of my personal development journey to push my skills further.
+
+## 💖 Support This Project
+If you find **MyFolio** useful or want to support its development, consider sponsoring me on GitHub!  
+
+Your support helps me:
+- Continue working on new features and improvements.
+- Dedicate more time to this and future open-source projects.
+- Plan potential **premium/custom features** in the future.
+
+👉 **[Sponsor Me on GitHub](https://github.com/sponsors/Guven-K)**  
+
+Even a small contribution or simply giving this project a ⭐ star is greatly appreciated! 🙏  
 
 Stay tuned for updates! 🚀
 Contact me for additional requests and potential growth. 

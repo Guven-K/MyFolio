@@ -43,7 +43,6 @@ If you find **MyFolio** useful or want to support its development, consider spon
 Your support helps me:
 - Continue working on new features and improvements.
 - Dedicate more time to this and future open-source projects.
-- Plan potential **premium/custom features** in the future.
 
 👉 **[Sponsor Me on GitHub](https://github.com/sponsors/Guven-K)**  
 

@@ -2,6 +2,8 @@
 
 **MyFolio** is a customisable portfolio application that's currently in work in progress. It uses the **Avalonia framework** and is designed to showcase your personal projects, skills, and achievements. Whether you're a developer, designer, or artist, MyFolio provides a sleek and professional way to present your work.  
 
+> **⚙️ Note:** This project is currently in **early development**. Features, design, and structure are still evolving. Stay tuned for updates!  
+
 ## ✨ Features  
 - 🎨 **Customisable Layout & Themes** – Personalise your portfolio to match your style.  
 - 📂 **Project Showcase** – Easily add and update projects with descriptions, images, and links.  

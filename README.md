@@ -30,7 +30,7 @@ MyFolio is released under an open-source license, encouraging collaboration and 
 ## 📅 Release & Contributions  
 - 🛠 **Work in progress** – MyFolio is actively being developed and is planned for release later this year.  
 - 🤝 **Contributions are welcome!** – If you're interested in contributing, feel free to check out the repository and submit issues or pull requests. 
-- 🛣 Check oit the project roadmap for planned features and issues.
+- 🛣 Check out the project roadmap for planned features and issues.
 
 ## 📜 License
 This project is licensed under the [MIT License](LICENSE).

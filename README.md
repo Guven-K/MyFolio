@@ -48,5 +48,7 @@ Your support helps me:
 
 Even a small contribution or simply giving this project a ⭐ star is greatly appreciated! 🙏  
 
+Ideas and feedback would be greatly appreciated.
+
 Stay tuned for updates! 🚀
 Contact me for additional requests and potential growth. 

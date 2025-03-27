@@ -1,6 +1,6 @@
 # **MyFolio**  
 
-**MyFolio** is a customisable portfolio application currently in progress. It uses the **Avalonia framework** and is designed to showcase your personal projects, skills, and achievements. Whether you're a developer, designer, or artist, MyFolio provides a sleek and professional way to present your work.  
+**MyFolio** is a customisable portfolio application currently in progress. It uses the **Avalonia framework** and is designed to showcase your personal projects, skills, and achievements. Whether you're a developer, designer, or artist. MyFolio provides a sleek and professional way to present your work.  
 
 > **⚙️ Note:** This project is currently in **early development**. Features, design, and structure are still evolving. Stay tuned for updates!  
 
@@ -20,7 +20,7 @@
 MyFolio is released under an open-source license, encouraging collaboration and community-driven enhancements. If you'd like to contribute, check out the [GitHub repository](#) for more details.  
 
 ## 📅 Projected Timescale  
-- **Q1 2025** – Core development, UI enhancements, and feature testing.  
+- **Q1 2025** – Core development, UI design, and feature testing.  
 - **Q2 2025** – Beta release, feedback gathering, and additional refinements.  
 - **Q3 2025** – Stable release with full documentation and more features.  
 - **Q4 2025** - Performance optimisations, bug fixes, and official release marketing.
@@ -46,7 +46,7 @@ Your support helps me:
 
 👉 **[Sponsor Me on GitHub](https://github.com/sponsors/Guven-K)**  
 
-Even a small contribution or simply giving this project a ⭐ star is greatly appreciated! 🙏  
+A small contribution or simply giving this project a ⭐ star is greatly appreciated! 🙏  
 
 Ideas and feedback would be greatly appreciated.
 

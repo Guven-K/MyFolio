@@ -36,8 +36,6 @@ Your support helps me:
 - Continue working on new features and improvements.
 - Dedicate more time to this and future open-source projects.
 
-👉 **[Sponsor Me on GitHub](https://github.com/sponsors/Guven-K)**  
-
 A small contribution or simply giving this project a ⭐ star is greatly appreciated! 🙏  
 
 Ideas and feedback would be greatly appreciated.

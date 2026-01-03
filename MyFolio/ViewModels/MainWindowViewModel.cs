@@ -30,11 +30,9 @@ public partial class MainWindowViewModel : ViewModelBase
     #region Constructor
     public MainWindowViewModel()
     {
-        Test();
-        Greeting = "Hello, World!";
+        Greeting = "Welcome to MyFolio!";
+        _ = ChangeText();
         DefaultProfilePicture();
-
-
     }
     #endregion
 
@@ -44,12 +42,6 @@ public partial class MainWindowViewModel : ViewModelBase
     {
         var uri = new Uri("avares://MyFolio/Assets/Images/profile.png");
         ProfilePicture = new Bitmap(AssetLoader.Open(uri));
-    }
-
-    public async void Test()
-    {
-        Greeting = "Welcome to MyFolio!";
-        await ChangeText();
     }
 
     private async Task ChangeText()
@@ -67,6 +59,7 @@ public partial class MainWindowViewModel : ViewModelBase
     public void Continue()
     {
         Greeting = "You clicked me!";
+
     }
 
 
@@ -90,7 +83,7 @@ public partial class MainWindowViewModel : ViewModelBase
         var result = await openDialog.ShowAsync(window);
         if (result != null && result.Length > 0)
         {
-            var selectedFile = result[0];
+            var selectedFile = result[0];   
             try
             {
                 await using var stream = File.OpenRead(selectedFile);

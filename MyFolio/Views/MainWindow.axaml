@@ -3,9 +3,8 @@
         xmlns:vm="using:MyFolio.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:ia="clr-namespace:Avalonia.Interactivity;assembly=Avalonia.Interactivity"
-        xmlns:behaviors="clr-namespace:Avalonia.Xaml.Interactions.Core;assembly=Avalonia.Xaml.Interactions"
-        xmlns:interactivity="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:ia="clr-namespace:Avalonia.Xaml.Interactivity;assembly=Avalonia.Xaml.Interactivity"
+        xmlns:core="clr-namespace:Avalonia.Xaml.Interactions.Core;assembly=Avalonia.Xaml.Interactions"
         mc:Ignorable="d"
         d:DesignWidth="800" d:DesignHeight="500"
         x:Class="MyFolio.Views.MainWindow"
@@ -20,8 +19,8 @@
 
 	<Design.DataContext>
 		<vm:MainWindowViewModel/>
-	</Design.DataContext>
 
+	</Design.DataContext>
 	<Grid ShowGridLines="False">
 		<Grid.RowDefinitions>
 			<RowDefinition Height="20*" />
@@ -44,14 +43,14 @@
               Cursor="Hand">
 
 			<!-- Mouse Hover Triggers -->
-			<interactivity:Interaction.Behaviors>
-				<behaviors:EventTriggerBehavior EventName="PointerEntered">
-					<behaviors:ChangePropertyAction PropertyName="IsHovering" Value="True" />
-				</behaviors:EventTriggerBehavior>
-				<behaviors:EventTriggerBehavior EventName="PointerExited">
-					<behaviors:ChangePropertyAction PropertyName="IsHovering" Value="False" />
-				</behaviors:EventTriggerBehavior>
-			</interactivity:Interaction.Behaviors>
+			<ia:Interaction.Behaviors>
+				<core:EventTriggerBehavior EventName="PointerEntered">
+					<core:ChangePropertyAction PropertyName="IsHovering" Value="True" />
+				</core:EventTriggerBehavior>
+				<core:EventTriggerBehavior EventName="PointerExited">
+					<core:ChangePropertyAction PropertyName="IsHovering" Value="False" />
+				</core:EventTriggerBehavior>
+			</ia:Interaction.Behaviors>
 
 			<!-- Profile Picture -->
 			<Border CornerRadius="50" Background="White" BoxShadow="0 3 50 0 DarkGray" ClipToBounds="True">

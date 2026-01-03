@@ -56,7 +56,7 @@ public partial class MainWindowViewModel : ViewModelBase
     #region RelayCommands Methods
 
     [RelayCommand]
-    public void Continue()
+    public void ContinueCommand()
     {
         Greeting = "You clicked me!";
 

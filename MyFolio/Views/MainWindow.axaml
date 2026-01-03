@@ -21,7 +21,7 @@
 		<vm:MainWindowViewModel/>
 
 	</Design.DataContext>
-	<Grid ShowGridLines="False">
+	<Grid ShowGridLines="True">
 		<Grid.RowDefinitions>
 			<RowDefinition Height="20*" />
 			<RowDefinition Height="50*" />
@@ -42,16 +42,6 @@
               HorizontalAlignment="Center" VerticalAlignment="Center"
               Cursor="Hand">
 
-			<!-- Mouse Hover Triggers -->
-			<ia:Interaction.Behaviors>
-				<core:EventTriggerBehavior EventName="PointerEntered">
-					<core:ChangePropertyAction PropertyName="IsHovering" Value="True" />
-				</core:EventTriggerBehavior>
-				<core:EventTriggerBehavior EventName="PointerExited">
-					<core:ChangePropertyAction PropertyName="IsHovering" Value="False" />
-				</core:EventTriggerBehavior>
-			</ia:Interaction.Behaviors>
-
 			<!-- Profile Picture -->
 			<Border CornerRadius="50" Background="White" BoxShadow="0 3 50 0 DarkGray" ClipToBounds="True">
 				<Image Source="{Binding ProfilePicture}" Stretch="UniformToFill" />
@@ -69,11 +59,16 @@
                     BorderThickness="0" Opacity="0"/>
 		</Grid>
 
+		<!-- Greeting Text -->
+		<TextBlock Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"
+				   Text="{Binding Greeting}" FontSize="24" FontWeight="SemiBold"
+				   HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10"/>
+
 		<!-- Continue Button -->
 		<Border Grid.Row="2" Grid.Column="1" CornerRadius="6" Background="Gainsboro"
                 Padding="10" BorderThickness="0.6" BorderBrush="Black" Margin="20"
                 HorizontalAlignment="Center" VerticalAlignment="Center">
-			<Button Command="{Binding Continue}" Content="Continue" FontWeight="Bold" Background="Gainsboro"/>
+			<Button Command="{Binding ContinueCommand}" Content="Continue" FontWeight="Bold" Background="Gainsboro"/>
 		</Border>
 	</Grid>
 </Window>

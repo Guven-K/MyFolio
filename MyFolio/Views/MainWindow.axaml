@@ -13,6 +13,7 @@
         Title="MyFolio"
         TransparencyLevelHint="AcrylicBlur"
         WindowStartupLocation="CenterScreen"
+		ExtendClientAreaChromeHints="SystemChrome"
         ExtendClientAreaToDecorationsHint="False"
         Width="1400"
         Height="800">
@@ -37,10 +38,17 @@
 		<TextBlock Grid.Row="0" Grid.Column="0" Text="MyFolio" FontWeight="Bold" FontFamily="Sans-serif"
                    FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10" />
 
+			<StackPanel Grid.Column="1" Grid.Row="0">
+				<TextBlock Text="Home" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold"/>
+			</StackPanel>
+
 		<!-- Profile Picture Container -->
 		<Grid Grid.Row="0" Grid.Column="2" Width="100" Height="100"
               HorizontalAlignment="Center" VerticalAlignment="Center"
               Cursor="Hand">
+
+
+		
 
 			<!-- Profile Picture -->
 			<Border CornerRadius="50" Background="White" BoxShadow="0 3 50 0 DarkGray" ClipToBounds="True">

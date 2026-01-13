@@ -8,21 +8,13 @@
 - 🌐 **Cross-Platform** – Built with Avalonia, making it available on Windows, Linux, and macOS.  
 - 📝 **Rich Content Support** – Supports text, images, videos, and other media formats.  
 - 🚀 **Modern & Minimal UI** – A clean, distraction-free interface for an engaging experience.
-- ⚙️ **Powered by NET. 9** - Ensuring better compatibility and high-level performance.
+- ⚙️ **Powered by NET. 10** - Ensuring better compatibility and high-level performance.
 
 ## 🛠️ Open Source  
 MyFolio is released under an open-source license, encouraging collaboration and community-driven enhancements. If you'd like to contribute, check out the [GitHub repository](#) for more details.  
 
-## 📅 Projected Timescale  
-- **Q1 2025** – Core development, UI enhancements, and feature testing.  
-- **Q2 2025** – Beta release, feedback gathering, and additional refinements.  
-- **Q3 2025** – Stable release with full documentation and more features.  
-- **Q4 2025** - Performance optimisations, bug fixes, and official release marketing.
-- **Beyond 2025** – Ongoing updates, community contributions, and potential expansions.
-- **2026** -  Introduction of basic online social features (e.g., friend requests, following) and potential web app support.
-
 ## 📅 Release & Contributions  
-- 🛠 **Work in progress** – MyFolio is actively being developed and is planned for release later this year.  
+- 🛠 **Work in progress** – MyFolio is an active project.  develope  
 - 🤝 **Contributions are welcome!** – If you're interested in contributing, feel free to check out the repository and submit issues or pull requests.  
 
 Stay tuned for updates! 🚀

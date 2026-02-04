@@ -47,7 +47,7 @@ public partial class MainWindowViewModel : ViewModelBase
     private async Task ChangeText()
     {
         await Task.Delay(2000);
-        Greeting = "Are you ready? Let's upload your profile picture!" ;
+        Greeting = "Are you ready? Let's upload your profile picture!";
     }
 
     #endregion
@@ -56,12 +56,12 @@ public partial class MainWindowViewModel : ViewModelBase
     #region RelayCommands Methods
 
     [RelayCommand]
-    public void ContinueCommand()
+    public async Task ContinueCommand()
     {
-        Greeting = "You clicked me!";
-
+        await ChangeProfilePicture();
+        Greeting = "Profile Picture updated!";
     }
-
+   
 
     [RelayCommand]
     public async Task ChangeProfilePicture()

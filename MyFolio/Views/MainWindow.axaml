@@ -1,23 +1,23 @@
 <Window xmlns="https://github.com/avaloniaui"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:vm="using:MyFolio.ViewModels"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:ia="clr-namespace:Avalonia.Xaml.Interactivity;assembly=Avalonia.Xaml.Interactivity"
-        xmlns:core="clr-namespace:Avalonia.Xaml.Interactions.Core;assembly=Avalonia.Xaml.Interactions"
-        mc:Ignorable="d"
-        d:DesignWidth="800" d:DesignHeight="500"
-        x:Class="MyFolio.Views.MainWindow"
-        x:DataType="vm:MainWindowViewModel"
-		RenderOptions.TextRenderingMode="Antialias" 
-        Icon="/Assets/avalonia-logo.ico"
-        Title="MyFolio"
-        TransparencyLevelHint="AcrylicBlur"
-        WindowStartupLocation="CenterScreen"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:vm="using:MyFolio.ViewModels"
+		xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		xmlns:ia="clr-namespace:Avalonia.Xaml.Interactivity;assembly=Avalonia.Xaml.Interactivity"
+		xmlns:core="clr-namespace:Avalonia.Xaml.Interactions.Core;assembly=Avalonia.Xaml.Interactions"
+		mc:Ignorable="d"
+		d:DesignWidth="800" d:DesignHeight="500"
+		x:Class="MyFolio.Views.MainWindow"
+		x:DataType="vm:MainWindowViewModel"
+		RenderOptions.TextRenderingMode="Antialias"
+		Icon="/Assets/avalonia-logo.ico"
+		Title="MyFolio"
+		TransparencyLevelHint="AcrylicBlur"
+		WindowStartupLocation="CenterScreen"
 		ExtendClientAreaChromeHints="SystemChrome"
-        ExtendClientAreaToDecorationsHint="False"
-        Width="1400"
-        Height="800">
+		ExtendClientAreaToDecorationsHint="False"
+		Width="1400"
+		Height="800">
 
 	<Design.DataContext>
 		<vm:MainWindowViewModel/>
@@ -41,43 +41,52 @@
 			<Button Content="Profile" />
 			<Button Content="Settings"/>
 		</StackPanel>
-		
+
 		<StackPanel Grid.Column="2" Grid.Row="0" VerticalAlignment="Center">
 			<TextBlock Text="MyFolio" FontWeight="Bold" FontFamily="Sans-serif"
-                   FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10" />
-			</StackPanel>
+					   FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10" />
+		</StackPanel>
 
-		<!-- Profile Picture Container -->
-		<Grid Grid.Row="1" Grid.Column="0" Width="100" Height="100"
-              HorizontalAlignment="Center" VerticalAlignment="Center"
-              Cursor="Hand">
+		<!-- Row 1: Center content (profile picture above greeting) -->
+		<StackPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"
+					HorizontalAlignment="Center"
+					VerticalAlignment="Center"
+					Spacing="16">
 
-			<!-- Profile Picture -->
-			<Border CornerRadius="50" Background="White" BoxShadow="0 3 50 0 DarkGray" ClipToBounds="True">
-				<Image Source="{Binding ProfilePicture}" Stretch="UniformToFill" />
-			</Border>
+			<!-- Profile Picture Container -->
+			<Grid Width="140" Height="140"
+				  HorizontalAlignment="Center"
+				  VerticalAlignment="Center"
+				  Cursor="Hand">
 
-			<!-- Hover Overlay -->
-			<Border Background="#80000000" CornerRadius="50"
-                    IsVisible="{Binding IsHovering}">
-				<TextBlock Text="Change Profile Pic" Foreground="White" FontWeight="Bold"
-                           HorizontalAlignment="Center" VerticalAlignment="Center"/>
-			</Border>
+				<Border CornerRadius="90" Background="White" BoxShadow="0 3 50 0 DarkGray" ClipToBounds="True">
+					<Image Source="{Binding ProfilePicture}" Stretch="UniformToFill" />
+				</Border>
 
-			<!-- Change Picture Button -->
-			<Button Command="{Binding ChangeProfilePicture}" Background="Transparent"
-                    BorderThickness="0" Opacity="0"/>
-		</Grid>
+				<Border Background="#80000000" CornerRadius="50"
+						IsVisible="{Binding IsHovering}">
+					<TextBlock Text="Change Profile Pic" Foreground="White" FontWeight="Bold"
+							   HorizontalAlignment="Center" VerticalAlignment="Center"/>
+				</Border>
 
-		<!-- Greeting Text -->
-		<TextBlock Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"
-				   Text="{Binding Greeting}" FontSize="24" FontWeight="SemiBold"
-				   HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10"/>
+				<Button Command="{Binding ChangeProfilePicture}"
+						Background="Transparent"
+						BorderThickness="0"
+						Opacity="0"/>
+			</Grid>
 
+			<!-- Greeting Text -->
+			<TextBlock Text="{Binding Greeting}"
+					   FontSize="24"
+					   FontWeight="SemiBold"
+					   HorizontalAlignment="Center"
+					   TextAlignment="Center"
+					   Margin="10"/>
+		</StackPanel>
 		<!-- Continue Button -->
 		<Border Grid.Row="2" Grid.Column="1" CornerRadius="6" Background="Gainsboro"
-                Padding="10" BorderThickness="0.6" BorderBrush="Black" Margin="20"
-                HorizontalAlignment="Center" VerticalAlignment="Center">
+				Padding="10" BorderThickness="0.6" BorderBrush="Black" Margin="20"
+				HorizontalAlignment="Center" VerticalAlignment="Center">
 			<Button Command="{Binding ContinueCommand}" Content="Continue" FontWeight="Bold" Background="Gainsboro"/>
 		</Border>
 	</Grid>

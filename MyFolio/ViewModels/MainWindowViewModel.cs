@@ -41,7 +41,8 @@ public partial class MainWindowViewModel : ViewModelBase
     private void DefaultProfilePicture()
     {
         var uri = new Uri("avares://MyFolio/Assets/Images/profile.png");
-        ProfilePicture = new Bitmap(AssetLoader.Open(uri));
+        using var stream = AssetLoader.Open(uri);
+        ProfilePicture = new Bitmap(stream);
     }
 
     private async Task ChangeText()
@@ -87,7 +88,12 @@ public partial class MainWindowViewModel : ViewModelBase
             try
             {
                 await using var stream = File.OpenRead(selectedFile);
-                ProfilePicture = new Bitmap(stream);
+                var newBitmap = new Bitmap(stream);
+                var oldBitmap = ProfilePicture;
+                
+                ProfilePicture = newBitmap;
+                // Flush and dispose the old bitmap to free memory resources 
+                oldBitmap?.Dispose();
             }
             catch (Exception ex)
             {

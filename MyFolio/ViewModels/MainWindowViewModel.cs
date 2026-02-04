@@ -47,7 +47,7 @@ public partial class MainWindowViewModel : ViewModelBase
     private async Task ChangeText()
     {
         await Task.Delay(2000);
-        Greeting = "Are you ready?";
+        Greeting = "Are you ready? Let's upload your profile picture!" ;
     }
 
     #endregion

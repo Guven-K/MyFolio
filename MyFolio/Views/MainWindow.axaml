@@ -35,12 +35,15 @@
 			<ColumnDefinition Width="25*" />
 			<ColumnDefinition Width="25*" />
 		</Grid.ColumnDefinitions>
-
-		<TextBlock Grid.Row="0" Grid.Column="0" Text="MyFolio" FontWeight="Bold" FontFamily="Sans-serif"
-                   FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10" />
-
+<StackPanel Grid.Column="0" Grid.Row="0" Orientation="Horizontal" Spacing="5">
+	<Button Content="Home" />
+	<Button Content="Profile" />
+	<Button Content="Settings"/>
+</StackPanel>
+		
 			<StackPanel Grid.Column="1" Grid.Row="0">
-				<TextBlock Text="Home" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold"/>
+			<TextBlock Text="MyFolio" FontWeight="Bold" FontFamily="Sans-serif"
+                   FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10" />
 			</StackPanel>
 
 		<!-- Profile Picture Container -->

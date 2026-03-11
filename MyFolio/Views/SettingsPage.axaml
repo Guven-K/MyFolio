@@ -1,0 +1,19 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:compilerservices="using:System.Runtime.CompilerServices"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="using:MyFolio.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="MyFolio.Views.SettingsPage"
+             x:DataType="vm:SettingsPageViewModel">
+
+    <DockPanel>
+        <Border DockPanel.Dock="Top" BorderThickness="1"/>
+        <StackPanel Spacing="10">
+            <CheckBox Content="Use Native Title Bar" IsChecked="False"/>
+            <CheckBox Content="Enable Dark Mode" IsChecked="False"/>  
+            <CheckBox Content="Enable Notifications" IsChecked="True"/>
+	    </StackPanel>
+    </DockPanel>
+</UserControl>

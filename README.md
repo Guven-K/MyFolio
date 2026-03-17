@@ -17,5 +17,4 @@ MyFolio is released under an open-source license, encouraging collaboration and 
 - 🛠 **Work in progress** – MyFolio is an active project.  develope  
 - 🤝 **Contributions are welcome!** – If you're interested in contributing, feel free to check out the repository and submit issues or pull requests.  
 
-Stay tuned for updates! 🚀
 

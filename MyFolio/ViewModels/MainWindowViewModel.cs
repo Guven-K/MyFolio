@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Threading.Tasks;
 using Avalonia.Media.Imaging;
 using Avalonia;
@@ -24,6 +24,14 @@ public partial class MainWindowViewModel : ViewModelBase
 
     [ObservableProperty]
     private bool _isHovering;
+
+    [ObservableProperty]
+    [NotifyPropertyChangedFor(nameof(IsSetupVisible))]
+    [NotifyPropertyChangedFor(nameof(IsNavigationVisible))]
+    private ViewModelBase? _currentPage;
+
+    public bool IsSetupVisible => CurrentPage == null;
+    public bool IsNavigationVisible => CurrentPage != null;
     #endregion
 
 
@@ -51,6 +59,12 @@ public partial class MainWindowViewModel : ViewModelBase
         Greeting = "Are you ready? Let's upload your profile picture!";
     }
 
+    partial void OnProfilePictureChanged(Bitmap? value)
+    {
+        if (CurrentPage is HomeViewModel homeVm)
+            homeVm.ProfilePicture = value;
+    }
+
     #endregion
 
 
@@ -62,7 +76,7 @@ public partial class MainWindowViewModel : ViewModelBase
         await ChangeProfilePicture();
         Greeting = "Profile Picture updated!";
     }
-   
+
 
     [RelayCommand]
     public async Task ChangeProfilePicture()
@@ -84,15 +98,15 @@ public partial class MainWindowViewModel : ViewModelBase
         var result = await openDialog.ShowAsync(window);
         if (result != null && result.Length > 0)
         {
-            var selectedFile = result[0];   
+            var selectedFile = result[0];
             try
             {
                 await using var stream = File.OpenRead(selectedFile);
                 var newBitmap = new Bitmap(stream);
                 var oldBitmap = ProfilePicture;
-                
+
                 ProfilePicture = newBitmap;
-                // Flush and dispose the old bitmap to free memory resources 
+                // Flush and dispose the old bitmap to free memory resources
                 oldBitmap?.Dispose();
             }
             catch (Exception ex)
@@ -101,6 +115,12 @@ public partial class MainWindowViewModel : ViewModelBase
             }
         }
 
+    }
+
+    [RelayCommand]
+    private void NavigateHome()
+    {
+        CurrentPage = new HomeViewModel(ProfilePicture);
     }
 
     public void OnMouseEnter(object? sender, Avalonia.Input.PointerEventArgs e) => IsHovering = true;

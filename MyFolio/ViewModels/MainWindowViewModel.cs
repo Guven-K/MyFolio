@@ -81,40 +81,42 @@ public partial class MainWindowViewModel : ViewModelBase
     [RelayCommand]
     public async Task ChangeProfilePicture()
     {
-        var openDialog = new OpenFileDialog
-        {
-            AllowMultiple = false,
-            Title = "Select Profile Picture",
-            Filters =
-                {
-                    new FileDialogFilter { Name = "Image Files", Extensions = { "png", "jpg", "jpeg", "bmp" } }
-                }
-        };
-
         var window = Application.Current?.ApplicationLifetime is Avalonia.Controls.ApplicationLifetimes.IClassicDesktopStyleApplicationLifetime desktop
             ? desktop.MainWindow
             : null;
 
-        var result = await openDialog.ShowAsync(window);
-        if (result != null && result.Length > 0)
+        if (window?.StorageProvider is not { } storageProvider)
+            return;
+
+        var result = await storageProvider.OpenFilePickerAsync(new FilePickerOpenOptions
         {
-            var selectedFile = result[0];
-            try
+            Title = "Select Profile Picture",
+            AllowMultiple = false,
+            FileTypeFilter = new[]
             {
-                await using var stream = File.OpenRead(selectedFile);
-                var newBitmap = new Bitmap(stream);
-                var oldBitmap = ProfilePicture;
+                new FilePickerFileType("Image Files")
+                {
+                    Patterns = new[] { "*.png", "*.jpg", "*.jpeg", "*.bmp" }
+                }
+            }
+        });
 
-                ProfilePicture = newBitmap;
-                // Flush and dispose the old bitmap to free memory resources
-                oldBitmap?.Dispose();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error loading profile picture: {ex.Message}");
-            }
+        if (result.Count == 0)
+            return;
+
+        try
+        {
+            await using var stream = await result[0].OpenReadAsync();
+            var newBitmap = new Bitmap(stream);
+            var oldBitmap = ProfilePicture;
+
+            ProfilePicture = newBitmap;
+            oldBitmap?.Dispose();
         }
-
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error loading profile picture: {ex.Message}");
+        }
     }
 
     [RelayCommand]
